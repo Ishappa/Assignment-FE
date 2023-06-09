@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Card Listing</title>
+  <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab" onclick="changeTab('your')">Your Cards</button>
+    <button class="tab" onclick="changeTab('all')">All Cards</button>
+    <button class="tab" onclick="changeTab('blocked')">Blocked Cards</button>
+  </div>
+  
+  <div class="filters">
+    <input id="search-input" type="text" placeholder="Search by card name" oninput="searchCards()">
+    <select id="type-filter" onchange="filterByType()">
+      <option value="">All Types</option>
+      <option value="burner">Burner</option>
+      <option value="subscription">Subscription</option>
+    </select>
+  </div>
+  
+  <div id="card-list"></div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
+ 
